@@ -8,9 +8,3 @@ services:
     - .:/code
     ports:
     - "8000:8000"
-    depends_on:
-      - migration
-  migration:
-    command: python hackernews/manage.py migrate --noinput
-    volumes:
-    - .:/code
